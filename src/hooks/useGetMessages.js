@@ -24,7 +24,6 @@ const useGetMessages = () => {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`,
             },
-            credentials: "include",
           }
         );
 

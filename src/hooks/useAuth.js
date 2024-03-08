@@ -9,7 +9,6 @@ const getAuthUser = async (token, setAuthUser) => {
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
     },
-    credentials: "include",
   });
 
   const data = await res.json();
@@ -45,7 +44,6 @@ const useLogin = () => {
           password,
           confirmPassword,
         }),
-        credentials: "include",
       });
 
       const data = await res.json();
@@ -70,7 +68,6 @@ const useLogin = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
-        credentials: "include",
       });
 
       const data = await res.json();

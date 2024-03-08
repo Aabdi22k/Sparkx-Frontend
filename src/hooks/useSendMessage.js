@@ -22,7 +22,6 @@ const useSendMessage = () => {
             Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({ message }),
-          credentials: "include",
         }
       );
 
