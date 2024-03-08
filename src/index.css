@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  font-family: "inter";
+  letter-spacing: 2px;
+}
+
+#auth-input:focus ~ #underline {
+  background-color: crimson;
+}
+
+#auth-input {
+  background-color: transparent;
+  outline: none;
+}
+
+
+
+::selection{
+  background: transparent;
+}
+
+::-moz-selection{
+  background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: transparent;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #F3F5F7 !important
+    
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow:0 0 0 50px transparent inset; /* Change the color to your own background color */
+  background-color: transparent;
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px transparent inset;
+} 
+
+#up:hover ~ #ub {
+  background-color: crimson;
+}
+
+.logo {
+  font-family: "comfortaa";
+  letter-spacing: 4px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
