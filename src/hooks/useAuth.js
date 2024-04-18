@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { useAuthContext } from "../context/AuthContext";
 
 const getAuthUser = async (token, setAuthUser) => {
-  const res = await fetch("https://sparkx-backend.onrender.com/users", {
+  const res = await fetch("http://localhost:3005/api/users", {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -35,7 +35,7 @@ const useLogin = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("https://sparkx-backend.onrender.com/auth/signup", {
+      const res = await fetch("http://localhost:3005/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -64,7 +64,7 @@ const useLogin = () => {
   const login = async (username, password, platform) => {
     setLoading(true);
     try {
-      const res = await fetch("https://sparkx-backend.onrender.com/auth/login", {
+      const res = await fetch("http://localhost:3005/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
