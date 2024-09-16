@@ -15,7 +15,7 @@ const useGetUsers = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          "http://localhost:3005/api/users/all",
+          "https://sparkx-backend-5gg2.onrender.com/api/users/all",
           {
             method: "GET",
             headers: {

@@ -17,7 +17,7 @@ const useGetMessages = () => {
 
       try {
         const res = await fetch(
-          "http://localhost:3005/api/messages/" + convoId,
+          "https://sparkx-backend-5gg2.onrender.com/api/messages/" + convoId,
           {
             method: "GET",
             headers: {

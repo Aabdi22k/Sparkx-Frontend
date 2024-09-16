@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("http://localhost:3005", {
+      const socket = io("https://sparkx-backend-5gg2.onrender.com", {
         query: {
           userId: authUser._id,
         },

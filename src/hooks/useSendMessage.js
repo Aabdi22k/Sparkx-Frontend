@@ -14,7 +14,7 @@ const useSendMessage = () => {
     const convoId = selectedConversation?._id;
     try {
       const res = await fetch(
-        "http://localhost:3005/api/messages/send/" + convoId,
+        "https://sparkx-backend-5gg2.onrender.com/api/messages/send/" + convoId,
         {
           method: "POST",
           headers: {
