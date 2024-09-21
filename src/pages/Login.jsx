@@ -6,6 +6,9 @@ import login1 from "../assets/login.svg";
 import apple from "../assets/Apple.svg";
 import Logo from "../components/Logo.jsx";
 import useAuth from "../hooks/useAuth.js";
+import { GoogleLogin } from "@react-oauth/google";
+
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -37,7 +40,7 @@ const Login = () => {
 
             {/** Social Login Buttons */}
             <div className="flex  gap-4">
-              <img src={google} alt="" />
+              <GoogleLogin onSuccess={login} onError={() => {}} />
               <img src={facebook} alt="" />
               <img src={github} alt="" />
               <img src={apple} alt="" />
@@ -74,9 +77,16 @@ const Login = () => {
               </div>
             </div>
             <button className=" w-4/5 text-n2 text-center text-sm flex  justify-center items-center rounded-md bg-crimson h-10">
-              Sign Up
+              Login
             </button>
           </form>
+
+          <span className="text-n2 text-center text-sm">
+        Don't have an account |{" "}
+        <Link className="text-crimson" to={"/signup"}>
+          Sign Up
+        </Link>
+      </span>
         </div>
       </div>
     </div>

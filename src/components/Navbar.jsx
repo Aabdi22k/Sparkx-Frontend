@@ -12,12 +12,9 @@ const Navbar = () => {
   return (
     <div className="p-6">
       <div className="flex space-x-8  justify-end ">
-        <img src={moon} width="20" alt="" />
-        <img src={plus} width="20" alt="" />
-        <img src={share} width="20" alt="" />
+        
         <LogoutButton />
-        <img src={archive} width="20" alt="" />
-        <img src={bookmark} width="20" alt="" />
+        
         <img src={authUser?.profilePic} width="36px" alt="" />
       </div>
     </div>

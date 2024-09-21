@@ -6,6 +6,9 @@ import github from "../assets/Github.svg";
 import apple from "../assets/Apple.svg";
 import Logo from "../components/Logo.jsx";
 import useAuth from "../hooks/useAuth.js";
+import { GoogleLogin } from "@react-oauth/google";
+
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [inputs, setInputs] = useState({
@@ -40,7 +43,7 @@ const SignUp = () => {
 
             {/** Social Sign Up Buttons */}
             <div className="flex  gap-4">
-              <img src={google} alt="" />
+              <GoogleLogin onSuccess={signUp} onError={() => {}} />
               <img src={facebook} alt="" />
               <img src={github} alt="" />
               <img src={apple} alt="" />
@@ -109,9 +112,13 @@ const SignUp = () => {
               Sign Up
             </button>
           </form>
-
-          {/** Sign Up Submit Form Button*/}
-        </div>
+                  
+          <span className="text-n2 text-center text-sm">
+        Already have an account |{" "}
+        <Link className="text-crimson" to={"/login"}>
+          Login
+        </Link>
+      </span>        </div>
       </div>
     </div>
   );

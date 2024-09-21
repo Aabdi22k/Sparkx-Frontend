@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import React from "react";
 
-const useGetUsers = () => {
+const useGetMyConversations = () => {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const token = localStorage.getItem("token") || null;
@@ -11,11 +11,11 @@ const useGetUsers = () => {
     return;
   }
   useEffect(() => {
-    const getUsers = async () => {
+    const getMyConversations = async () => {
       setLoading(true);
       try {
         const res = await fetch(
-          "http://localhost:3005/api/users/all",
+          "http://localhost:3005/api/users/conversations",
           {
             method: "GET",
             headers: {
@@ -40,10 +40,10 @@ const useGetUsers = () => {
       }
     };
 
-    getUsers();
+    getMyConversations();
   }, []);
 
   return { loading, users };
 };
 
-export default useGetUsers;
+export default useGetMyConversations;

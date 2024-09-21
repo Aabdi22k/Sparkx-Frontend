@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import search1 from "../assets/search.svg";
+import plus from "../assets/plus.svg";
 import useConversation from "../zustand/useConversation";
 import useGetUsers from "../hooks/useGetUsers";
 import toast from "react-hot-toast";
@@ -38,10 +38,10 @@ const SearchBar = () => {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         className="w-full bg-transparent outline-none text-xs placeholder-n4 placeholder:text-xs text-n2"
-        placeholder="Search"
+        placeholder="Username"
       />
-      <button className="p-2 bg-crimson rounded-lg grid place-content-center">
-        <img src={search1} width="16px" height="16px" alt="" />
+      <button className="p-1 bg-crimson rounded-md grid place-content-center">
+        <img src={plus} width="20px" height="20px" alt="" />
       </button>
     </form>
   );
