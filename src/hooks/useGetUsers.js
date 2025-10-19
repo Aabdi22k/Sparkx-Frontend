@@ -16,7 +16,7 @@ const useGetUsers = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          "http://localhost:3005/api/users/all",
+          "/api/users/all",
           {
             method: "GET",
             headers: {

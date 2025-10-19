@@ -18,7 +18,7 @@ const useGetMessages = () => {
 
       try {
         const res = await fetch(
-          "http://localhost:3005/messages/" + convoId,
+          "/messages/" + convoId,
           {
             method: "GET",
             headers: {

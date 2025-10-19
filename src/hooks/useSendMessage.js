@@ -19,7 +19,7 @@ const useSendMessage = () => {
     const convoId = selectedConversation?._id;
     try {
       const res = await fetch(
-        "http://localhost:3005/messages/send/" + convoId,
+        "/messages/send/" + convoId,
         {
           method: "POST",
           headers: {

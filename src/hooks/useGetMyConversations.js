@@ -16,7 +16,7 @@ const useGetMyConversations = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          "http://localhost:3005/api/users/conversations",
+          "/api/users/conversations",
           {
             method: "GET",
             headers: {
